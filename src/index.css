@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#hero {
+    background-image: url('assets/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#legends {
+    background-image: url('https://wallpapercave.com/wp/wp3186008.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

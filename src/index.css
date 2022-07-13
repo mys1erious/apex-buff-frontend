@@ -10,8 +10,5 @@
 }
 
 #legends {
-    background-image: url('https://wallpapercave.com/wp/wp3186008.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: #fff;
 }

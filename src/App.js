@@ -1,22 +1,21 @@
-import React from 'react'
+import React from "react";
 
-import Nav from './components/nav/Nav'
-import Hero from './components/hero/Hero'
-import Legends from './components/legends/Legends'
-import Weapons from './components/weapons/Weapons'
-import Footer from './components/footer/Footer'
-
+import Nav from "./components/nav/Nav";
+import Hero from "./components/hero/Hero";
+import Legends from "./components/legends/Legends";
+import Weapons from "./components/weapons/Weapons";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
-  <>
-    <Nav />
-    <Hero />
-    <Legends />
-    <Weapons />
-    <Footer />
-  </>
-  )
-}
+    <>
+      <Nav />
+      <Hero />
+      <Weapons />
+      <Legends />
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;

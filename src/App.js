@@ -11,8 +11,8 @@ const App = () => {
     <>
       <Nav />
       <Hero />
-      <Weapons />
       <Legends />
+      <Weapons />
       <Footer />
     </>
   );

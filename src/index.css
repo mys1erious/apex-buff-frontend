@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
 #hero {
-    background-image: url('assets/bg-2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("assets/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all ease-in-out;
+  transition-duration: 0.5s;
+}
+
+#hero:hover {
+  background-position: center;
 }
 
 #legends {
-    background: #fff;
+  background: #fff;
 }

@@ -1,28 +1,28 @@
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_apexbuff.svg";
 
 const Nav = () => {
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-sm container mx-auto p-6 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-20">
-          <img className="w-64" src={logo} alt="" />
+          <img className="w-32" src={logo} alt="" />
           <div className="hidden space-x-8 font-bold lg:flex">
             <a
               href="#"
-              className="text-blue-500 bg-white px-1 py-0.2 rounded-md  hover:text-blue-800"
+              className="text-mainColor bg-white px-1 py-0.2 rounded-md  hover:text-accentColor"
             >
               Home
             </a>
             <a
               href="#legends"
-              className="text-blue-500 bg-white px-1 py-0.2 rounded-md hover:text-blue-800"
+              className="text-mainColor bg-white px-1 py-0.2 rounded-md hover:text-accentColor"
             >
               Legends
             </a>
             <a
               href="#weapons"
-              className="text-blue-500 bg-white px-1 py-0.2 rounded-md hover:text-blue-800"
+              className="text-mainColor bg-white px-1 py-0.2 rounded-md hover:text-accentColor"
             >
               Weapons
             </a>
@@ -30,13 +30,13 @@ const Nav = () => {
         </div>
 
         {/* <!-- Right Buttons Menu --> */}
-        <div className="hidden items-center space-x-6 font-bold text-blue-500 lg:flex">
-          <div className="hover:text-blue-800 hover:cursor-pointer bg-white px-8 py-3 rounded-full">
+        <div className="hidden items-center space-x-6 font-bold lg:flex">
+          <div className="text-mainColor hover:text-accentColor hover:cursor-pointer bg-white px-8 py-3 rounded-full">
             Login
           </div>
           <a
             href="#"
-            className="px-8 py-3 font-bold text-white bg-blue-600 rounded-full hover:opacity-70"
+            className="px-8 py-3 font-bold text-white bg-mainColor rounded-full hover:bg-accentColor"
           >
             Sign Up
           </a>

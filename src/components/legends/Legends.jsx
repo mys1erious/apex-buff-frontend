@@ -43,7 +43,7 @@ const Legends = () => {
           <div className="flex justify-center flex-col items-center space-x-2">
             <div className="flex justify-center items-center flex-row">
               <GiCharacter className="text-2xl text-blue-800 mr-1" />
-              <h2 className="text-3xl font-bold text-center bg-red-500 py-2 text-blue-800">
+              <h2 className="text-3xl font-bold text-center py-2 text-blue-800">
                 Legends
               </h2>
             </div>

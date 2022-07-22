@@ -42,8 +42,8 @@ const Weapons = () => {
         <div className="container my-12 mx-auto px-4 md:px-12">
           <div className="flex justify-center flex-col items-center space-x-2">
             <div className="flex justify-center items-center flex-row">
-              <GiBolterGun className="text-2xl text-blue-800 mr-1" />
-              <h2 className="text-3xl font-bold text-center py-2 text-blue-800">
+              <GiBolterGun className="text-2xl text-mainColor mr-1" />
+              <h2 className="text-3xl font-bold text-center py-2 text-mainColor">
                 Weapons
               </h2>
             </div>
@@ -81,7 +81,7 @@ const Weapons = () => {
                       src={weapon.icon_url}
                     />
                     <header className="flex items-center justify-center flex-col leading-tight p-2 md:p-4">
-                      <h1 className="text-lg font-bold text-blue-700">
+                      <h1 className="text-lg font-bold text-mainColor">
                         {weapon.name}
                       </h1>
                       <p className="text-grey-darker text-sm text-white font-bold px-4 py-1 bg-violet-500 rounded-xl">
@@ -147,11 +147,11 @@ const Weapons = () => {
                           >
                             {weapon.firemods.length > 0
                               ? weapon.firemods.map((i) => (
-                                  <div className="flex flex-col shadow-sm justify-center items-center md:items-start md:ml-2 ">
-                                    <span
-                                      key={i.firemode.slug}
-                                      className="text-sm py-0.5 px-1 bg-violet-500 rounded-sm text-white tracking-wide"
-                                    >
+                                  <div
+                                    key={i.firemode.slug}
+                                    className="flex flex-col shadow-sm justify-center items-center md:items-start md:ml-2 "
+                                  >
+                                    <span className="text-sm py-0.5 px-1 bg-violet-500 rounded-sm text-white tracking-wide">
                                       {i.firemode.name.toUpperCase()}
                                     </span>
 

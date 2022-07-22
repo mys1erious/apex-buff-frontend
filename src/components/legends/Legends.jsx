@@ -42,8 +42,8 @@ const Legends = () => {
         <div className="container my-12 mx-auto px-4 md:px-12">
           <div className="flex justify-center flex-col items-center space-x-2">
             <div className="flex justify-center items-center flex-row">
-              <GiCharacter className="text-2xl text-blue-800 mr-1" />
-              <h2 className="text-3xl font-bold text-center py-2 text-blue-800">
+              <GiCharacter className="text-2xl text-mainColor mr-1" />
+              <h2 className="text-3xl font-bold text-center py-2 text-mainColor">
                 Legends
               </h2>
             </div>
@@ -80,10 +80,10 @@ const Legends = () => {
                       src={legend.icon_url}
                     />
                     <header className="flex items-center justify-center flex-col leading-tight p-2 md:p-4">
-                      <h1 className="text-lg font-bold text-blue-700">
+                      <h1 className="text-lg font-bold text-mainColor">
                         {legend.name}
                       </h1>
-                      <p className="text-grey-darker text-sm text-white font-bold px-4 py-1 bg-violet-500 rounded-xl">
+                      <p className="text-grey-darker text-sm text-white font-bold px-4 py-1 bg-baseColor rounded-xl">
                         {legend.role}
                       </p>
                     </header>
@@ -97,7 +97,7 @@ const Legends = () => {
                         <div className="flex relative">
                           <img
                             alt="skill"
-                            className="block rounded-full border-2 border-violet-500 w-14 h-14"
+                            className="block rounded-full border-2 border-baseColor w-14 h-14"
                             src={legend.abilities[0].icon_url}
                           />
                           <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
@@ -122,7 +122,7 @@ const Legends = () => {
                         <div className="flex relative">
                           <img
                             alt="skill"
-                            className="block rounded-full border-2 border-violet-500 w-14 h-14"
+                            className="block rounded-full border-2 border-baseColor w-14 h-14"
                             src={legend.abilities[1].icon_url}
                           />
                           <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
@@ -147,7 +147,7 @@ const Legends = () => {
                         <div className="flex relative">
                           <img
                             alt="skill"
-                            className="block rounded-full border-2 border-violet-500 w-14 h-14"
+                            className="block rounded-full border-2 border-accentColor w-14 h-14"
                             src={legend.abilities[2].icon_url}
                           />
                           <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">

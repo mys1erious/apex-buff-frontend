@@ -4,7 +4,10 @@ import logo from "../../assets/logo_apexbuff.svg";
 const Footer = () => {
   return (
     <>
-      <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
+      <footer
+        id="footer"
+        className="p-4 bg-white md:px-6 md:py-8 dark:bg-gray-900"
+      >
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
             href="https://flowbite.com/"
@@ -15,7 +18,7 @@ const Footer = () => {
               ApexBuff
             </span>
           </a>
-          <ul className="flex flex-wrap items-center mb-6 text-sm text-mainColor sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm text-white sm:mb-0 dark:text-gray-400">
             <li>
               <a href="#" className="mr-4 hover:underline md:mr-6 ">
                 Home
@@ -34,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="block text-sm text-gray-400 sm:text-center dark:text-gray-400">
           © 2022{" "}
           <a href="#" className="hover:underline">
             ApexBuff™

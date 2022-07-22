@@ -39,11 +39,11 @@ const Legends = () => {
   return (
     <>
       <section id="legends">
-        <div className="container my-12 mx-auto px-4 md:px-12">
+        <div className="container pt-24 mx-auto px-4 md:px-12">
           <div className="flex justify-center flex-col items-center space-x-2">
             <div className="flex justify-center items-center flex-row">
-              <GiCharacter className="text-2xl text-mainColor mr-1" />
-              <h2 className="text-3xl font-bold text-center py-2 text-mainColor">
+              <GiCharacter className="text-2xl text-gray-200 mr-1" />
+              <h2 className="text-3xl font-bold text-center py-2 text-gray-200">
                 Legends
               </h2>
             </div>

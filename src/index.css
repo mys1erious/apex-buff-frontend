@@ -10,5 +10,13 @@
 }
 
 #legends {
-  background: #fff;
+  background-color: rgb(31 41 55);
+}
+
+#weapons {
+  background-color: rgb(31 41 55);
+}
+
+#footer {
+  background-color: rgb(31 41 55);
 }

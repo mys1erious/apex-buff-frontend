@@ -9,7 +9,7 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <>
-      <Nav />
+      <Nav id="page-wrap" />
       <Hero />
       <Legends />
       <Weapons />

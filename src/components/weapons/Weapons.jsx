@@ -39,11 +39,11 @@ const Weapons = () => {
   return (
     <>
       <section id="weapons">
-        <div className="container my-12 mx-auto px-4 md:px-12">
+        <div className="container pt-24 mx-auto px-4 md:px-12">
           <div className="flex justify-center flex-col items-center space-x-2">
             <div className="flex justify-center items-center flex-row">
-              <GiBolterGun className="text-2xl text-mainColor mr-1" />
-              <h2 className="text-3xl font-bold text-center py-2 text-mainColor">
+              <GiBolterGun className="text-2xl text-gray-200 mr-1" />
+              <h2 className="text-3xl font-bold text-center py-2 text-gray-200">
                 Weapons
               </h2>
             </div>
@@ -97,8 +97,8 @@ const Weapons = () => {
                     {/* weapon skills and description */}
                     <footer className="flex flex-col">
                       {/* Damage */}
-                      <div className="flex flex-col justify-center items-center leading-none p-1 md:p-1 md:flex-row md:h-12 md:overflow-auto md:justify-start md:ml-2">
-                        <h3 className="flex justify-center items-center text-white w-full py-1 px-2 bg-gray-700 rounded-sm h-6 md:w-auto">
+                      <div className="flex flex-col justify-center items-center leading-none p-1 ">
+                        <h3 className="flex justify-center items-center text-white w-auto py-1 px-2 bg-gray-700 rounded-sm h-6 ">
                           Damage
                         </h3>
                         <div className="flex justify-center space-x-4 h-6 mt-2 ml-1 items-center md:items-start md:justify-between lg:text-sm lg:font-bold">
@@ -114,7 +114,7 @@ const Weapons = () => {
                         </div>
                       </div>
                       {/* Attachments */}
-                      <div className="flex flex-col justify-center leading-none p-2 md:p-1 md:flex-row md:h-12 md:overflow-auto md:justify-start md:ml-2">
+                      <div className="flex flex-col justify-center items-center leading-none p-2 ">
                         <h3 className="flex justify-center items-center text-white w-auto py-1 px-2 bg-gray-700 rounded-sm h-6">
                           Attachments
                         </h3>
@@ -136,8 +136,8 @@ const Weapons = () => {
                         </div>
                       </div>
                       {/* Damage stats */}
-                      <div className="flex flex-col justify-center items-center leading-none p-2 md:p-1 md:h-36 md:overflow-auto md:justify-start md:items-start md:ml-2">
-                        <h3 className="flex justify-center items-center text-white w-full py-1 px-2 bg-gray-700 rounded-sm h-6 h-max-auto md:w-auto">
+                      <div className="flex flex-col justify-center items-center leading-none p-2 ">
+                        <h3 className="flex justify-center items-center text-white w-auto py-1 px-2 bg-gray-700 rounded-sm h-6 h-max-auto">
                           Damage stats
                         </h3>
                         <div className="flex justify-center space-x-4 mt-2 ml-1 items-center md:items-start md:justify-between">

@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="mx-auto lg:mx-0">
               <a
                 href="#"
-                className="py-5 px-10 text-2xl font-bold text-white bg-blue-600 rounded-full lg:py-4 hover:bg-accentColor"
+                className="py-5 px-10 text-2xl font-bold text-white bg-gray-800 rounded-md lg:py-4 hover:bg-mainColor hover:border hover:border-white "
               >
                 Get Started
               </a>

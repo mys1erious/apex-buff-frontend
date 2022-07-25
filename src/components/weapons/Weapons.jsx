@@ -84,14 +84,29 @@ const Weapons = () => {
                       <h1 className="text-lg font-bold text-mainColor">
                         {weapon.name}
                       </h1>
-                      <p className="text-grey-darker text-sm text-white font-bold px-4 py-1 bg-violet-500 rounded-xl">
-                        {weapon.ammo.name}
+                      <div className="flex space-x-4 text-grey-darker text-sm text-white font-bold px-4 py-1 bg-violet-500 rounded-xl">
+                        {weapon.ammo.length > 0
+                          ? weapon.ammo.map((i) => (
+                              <div
+                                key={i.slug}
+                                className="flex justify-center items-center"
+                              >
+                                <span>{i.name}</span>
+                                <img
+                                  className="inline ml-2 w-4 h-4"
+                                  src={i.icon_url}
+                                ></img>
+                              </div>
+                            ))
+                          : "-"}
+
+                        {/* {weapon.ammo.name}
                         <img
                           className="inline ml-2 w-4 h-4"
                           src={weapon.ammo.icon_url}
                           alt=""
-                        />
-                      </p>
+                        /> */}
+                      </div>
                     </header>
 
                     {/* weapon skills and description */}
@@ -101,17 +116,32 @@ const Weapons = () => {
                         <h3 className="flex justify-center items-center text-white w-auto py-1 px-2 bg-gray-700 rounded-sm h-6 ">
                           Damage
                         </h3>
-                        <div className="flex justify-center space-x-4 h-6 mt-2 ml-1 items-center md:items-start md:justify-between lg:text-sm lg:font-bold">
-                          <span className="text-yellow-700">
-                            body: {weapon.damage.body}
-                          </span>
-                          <span className="text-green-700">
-                            head: {weapon.damage.head}
-                          </span>
-                          <span className="text-blue-700">
-                            legs: {weapon.damage.legs}
-                          </span>
-                        </div>
+                        {weapon.damage.length > 0
+                          ? weapon.damage.map((i, index) => (
+                              <div
+                                key={index}
+                                className="relative flex justify-center space-x-4 h-6 mt-2 ml-1 items-center md:items-start md:justify-between lg:text-sm lg:font-bold"
+                              >
+                                {weapon.damage.length > 1 ? (
+                                  <span className="absolute text-center italic mt-7 left-4 bg-gray-700 px-1 rounded-sm text-blue-200 text-[10px] md:mt-4 md:bg-transparent md:text-gray-700 md:text-xs">
+                                    - {i.modificator.name}
+                                  </span>
+                                ) : (
+                                  ""
+                                )}
+
+                                <span className="text-yellow-700">
+                                  body: {i.body}
+                                </span>
+                                <span className="text-green-700">
+                                  head: {i.head}
+                                </span>
+                                <span className="text-blue-700">
+                                  legs: {i.legs}
+                                </span>
+                              </div>
+                            ))
+                          : ""}
                       </div>
                       {/* Attachments */}
                       <div className="flex flex-col justify-center items-center leading-none p-2 ">
@@ -131,7 +161,7 @@ const Weapons = () => {
                                     src={i.icon_url}
                                   ></img>
                                 ))
-                              : "NO"}
+                              : "-"}
                           </div>
                         </div>
                       </div>
@@ -145,25 +175,25 @@ const Weapons = () => {
                             id="span-damageStats"
                             className="flex flex-row shadow-md rounded-sm p-2 w-full justify-center space-x-4 space-y-0 md:justify-between"
                           >
-                            {weapon.firemods.length > 0
-                              ? weapon.firemods.map((i) => (
+                            {weapon.fire_modes.length > 0
+                              ? weapon.fire_modes.map((i, index) => (
                                   <div
-                                    key={i.firemode.slug}
-                                    className="flex flex-col shadow-sm justify-center items-center md:items-start md:ml-2 "
+                                    key={index}
+                                    className="relative flex flex-col shadow-sm justify-center items-center md:items-start md:ml-2 "
                                   >
                                     <span className="text-sm py-0.5 px-1 bg-violet-500 rounded-sm text-white tracking-wide">
-                                      {i.firemode.name.toUpperCase()}
+                                      {i.fire_mode.name.toUpperCase()}
                                     </span>
 
                                     <div className="flex flex-row mt-2 space-x-2 text-md md:flex-col md:text-sm md:mt-1 md:space-x-0">
                                       <span className="text-red md:font-bold">
-                                        dps: {i.damage_stats.dps}
+                                        dps: {i.stats.dps}
                                       </span>
                                       <span className="text-green-700 md:font-bold">
-                                        ttk: {i.damage_stats.ttk}
+                                        ttk: {i.stats.ttk}
                                       </span>
                                       <span className="text-yellow-700 md:font-bold">
-                                        rpm: {i.damage_stats.rpm}
+                                        rpm: {i.stats.rpm}
                                       </span>
                                     </div>
                                   </div>

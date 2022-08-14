@@ -1,38 +1,9 @@
-// import React from "react";
 import logo from "../../assets/logo_apexbuff.svg";
-import React, { useState, useEffect, useRef } from "react";
-// import { createGlobalState } from "react-hooks-global-state";
+import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const ref = useRef(null);
-  // let finalInput = "";
-
-  // const [userInput, setUserInput] = useState("");
-  // const { setUsername, useUsername } = createGlobalState({
-  //   username: "k1llovat",
-  // });
-
-  // console.log(setUsername);
-
-  // useEffect(() => {
-  //   const inputSearch = document.getElementById("usernameSearch");
-  //   const handleClick = (event) => {
-  //     finalInput = inputSearch.value;
-  //     console.log(finalInput);
-  //   };
-
-  //   const element = ref.current;
-
-  //   element.addEventListener("click", handleClick);
-
-  //   return () => {
-  //     element.removeEventListener("click", handleClick);
-  //   };
-  // }, []);
-  // console.log(userInput);
 
   return (
     <div className="sticky top-0 z-50">
@@ -53,6 +24,13 @@ const Nav = () => {
                   </a>
 
                   <a
+                    href="#stats"
+                    className="text-gray-300 hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Stats
+                  </a>
+
+                  <a
                     href="#legends"
                     className="text-gray-300 hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
@@ -65,32 +43,6 @@ const Nav = () => {
                   >
                     Weapons
                   </a>
-
-                  <a
-                    href="#stats"
-                    className="text-gray-300 hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Stats
-                  </a>
-
-                  {/* <div className="flex justify-center items-center space-x-2">
-                    <input
-                      type="search"
-                      id="usernameSearch"
-                      className="form-control relative flex-auto min-w-0 block w-full px-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      placeholder="Your nickname..."
-                      aria-label="Search"
-                      aria-describedby="button-addon3"
-                      // onChange={(e) => setUserInput(e.target.value)}
-                    />
-                    <button
-                      className="inline-block px-6 py-1 border-2  border-baseColor text-white font-medium tracking-wide text-xs leading-tight uppercase rounded hover:bg-white hover:text-mainColor  focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                      type="button"
-                      id="button-addon3"
-                    >
-                      Search
-                    </button>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -159,6 +111,12 @@ const Nav = () => {
                 >
                   Home
                 </a>
+                <a
+                  href="#stats"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Stats
+                </a>
 
                 <a
                   href="#legends"
@@ -173,31 +131,6 @@ const Nav = () => {
                 >
                   Weapons
                 </a>
-
-                <a
-                  href="#stats"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Stats
-                </a>
-
-                {/* <div className="flex flex-col justify-center items-start ml-3 space-y-2">
-                  <input
-                    type="search"
-                    id="usernameSearch"
-                    className="form-control relative flex-auto min-w-0 block w-72 px-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="Your nickname..."
-                    aria-label="Search"
-                    aria-describedby="button-addon3"
-                  />
-                  <button
-                    className="inline-block px-6 py-1 border-2  border-baseColor text-white font-medium tracking-wide text-xs leading-tight uppercase rounded hover:bg-white hover:text-mainColor  focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                    type="button"
-                    id="button-addon3"
-                  >
-                    Search
-                  </button>
-                </div> */}
               </div>
             </div>
           )}

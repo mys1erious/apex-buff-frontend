@@ -99,13 +99,6 @@ const Weapons = () => {
                               </div>
                             ))
                           : "-"}
-
-                        {/* {weapon.ammo.name}
-                        <img
-                          className="inline ml-2 w-4 h-4"
-                          src={weapon.ammo.icon_url}
-                          alt=""
-                        /> */}
                       </div>
                     </header>
 

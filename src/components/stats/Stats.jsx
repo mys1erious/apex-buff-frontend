@@ -221,15 +221,6 @@ const Stats = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between flex-wrap items-center gap-2 m-2">
-            {/* <!-- Legends played current season --> */}
-            <div className="flex justify-center items-center grow space-x-2 rounded-sm p-2">
-              <div className="text-gray-300">Legend name</div>
-              <div className="text-white bg-gray-800 font-bold px-2 rounded-lg">
-                {data.data.segments[0].stats.level.value}
-              </div>
-            </div>
-          </div>
         </div>
       ) : (
         ""

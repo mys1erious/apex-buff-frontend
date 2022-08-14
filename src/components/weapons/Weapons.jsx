@@ -9,8 +9,9 @@ const Weapons = () => {
   const fetchData = async () => {
     const result = await fetch(
       "https://apex-buff-development.herokuapp.com/api/v1/weapons/"
-    ).then((res) => res.json());
-    setData(result);
+    );
+    let resData = await result.json();
+    setData(resData);
   };
 
   useEffect(() => {
@@ -21,7 +22,6 @@ const Weapons = () => {
       if (e.target.value.length > 0) {
         for (let i = 0; i < weaponCards.length; i++) {
           weaponCards[i].classList.add("hidden");
-          console.log(`id: ${weaponCards[i].id} value:${e.target.value}`);
           if (weaponCards[i].id.indexOf(e.target.value.toLowerCase()) > -1) {
             weaponCards[i].classList.remove("hidden");
             weaponCards[i].classList.add("block");
@@ -34,7 +34,7 @@ const Weapons = () => {
         }
       }
     };
-  }, [data]);
+  }, []);
 
   return (
     <>
@@ -72,7 +72,7 @@ const Weapons = () => {
                   key={index}
                   className="weaponCard my-1 px-1 w-full md:w-1/2 lg:my-4 lg:w-1/3 "
                 >
-                  <article className="rounded-lg shadow-lg pb-12 bg-gradient-to-r from-rose-100 to-teal-100 md:pb-2">
+                  <article className="rounded-lg shadow-lg pb-12 bg-[#ADD8E6] md:pb-2">
                     {/* Weapon image & name */}
 
                     <img
@@ -84,7 +84,7 @@ const Weapons = () => {
                       <h1 className="text-lg font-bold text-mainColor">
                         {weapon.name}
                       </h1>
-                      <div className="flex space-x-4 text-grey-darker text-sm text-white font-bold px-4 py-1 bg-violet-500 rounded-xl">
+                      <div className="flex space-x-4 text-grey-darker text-sm text-white font-bold px-4 py-1 bg-baseColor  rounded-xl">
                         {weapon.ammo.length > 0
                           ? weapon.ammo.map((i) => (
                               <div
@@ -181,7 +181,7 @@ const Weapons = () => {
                                     key={index}
                                     className="relative flex flex-col shadow-sm justify-center items-center md:items-start md:ml-2 "
                                   >
-                                    <span className="text-sm py-0.5 px-1 bg-violet-500 rounded-sm text-white tracking-wide">
+                                    <span className="text-sm py-0.5 px-1 bg-baseColor rounded-sm text-white tracking-wide">
                                       {i.fire_mode.name.toUpperCase()}
                                     </span>
 

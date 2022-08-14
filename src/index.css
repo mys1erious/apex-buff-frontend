@@ -9,6 +9,10 @@
   background-attachment: fixed;
 }
 
+#stats {
+  background-color: rgb(31 41 55);
+}
+
 #legends {
   background-color: rgb(31 41 55);
 }

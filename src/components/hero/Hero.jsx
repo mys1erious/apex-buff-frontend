@@ -15,7 +15,7 @@ const Hero = () => {
             </p>
             <div className="mx-auto lg:mx-0">
               <a
-                href="#"
+                href="#stats"
                 className="py-5 px-10 text-2xl font-bold text-white bg-gray-800 rounded-md lg:py-4 hover:bg-mainColor hover:border hover:border-white "
               >
                 Get Started
@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="group mx-auto hidden md:block md:w-180 lg:mb-0 lg:w-1/2 backdrop-blur-xl mb-12 lg:mt-16 xl:mb-24">
+          <div className="group mx-auto hidden md:block md:w-180 lg:mb-0 lg:w-1/2 mb-12 lg:mt-16 xl:mb-24">
             <img
               className="rounded-md transition duration-500 ease-in-out group-hover:animate-pulse"
               src={heroRightImg}

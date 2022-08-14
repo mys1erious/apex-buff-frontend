@@ -9,8 +9,9 @@ const Legends = () => {
   const fetchData = async () => {
     const result = await fetch(
       "https://apex-buff-development.herokuapp.com/api/v1/legends/"
-    ).then((res) => res.json());
-    setData(result);
+    );
+    let resData = await result.json();
+    setData(resData);
   };
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const Legends = () => {
         }
       }
     };
-  }, [data]);
+  }, []);
 
   return (
     <>
@@ -72,7 +73,7 @@ const Legends = () => {
                   key={index}
                   className="legendCard my-1 px-1 w-full md:w-1/2 lg:my-4 lg:w-1/3 "
                 >
-                  <article className="rounded-lg shadow-lg pb-12 bg-gradient-to-r from-rose-100 to-teal-100 md:pb-2">
+                  <article className="rounded-lg shadow-lg pb-12 bg-[#ADD8E6] md:pb-2">
                     {/* Legend image & name */}
                     <img
                       alt={legend.name}
@@ -91,7 +92,7 @@ const Legends = () => {
                     {/* Legend skills and description */}
                     <footer className="flex flex-col leading-none p-2 md:p-1 md:flex-row md:h-52 md:overflow-auto">
                       <a
-                        className="flex flex-col py-2 items-center no-underline md:w-1/3"
+                        className="flex flex-col py-2 items-center no-underline md:w-1/3 pointer-events-none cursor-default"
                         href="#"
                       >
                         <div className="flex relative">
@@ -100,7 +101,7 @@ const Legends = () => {
                             className="block rounded-full border-2 border-baseColor w-14 h-14"
                             src={legend.abilities[0].icon_url}
                           />
-                          <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
+                          <div className="absolute  bg-baseColor rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
                             {legend.abilities[0].cooldown === null
                               ? 0
                               : legend.abilities[0].cooldown}
@@ -116,7 +117,7 @@ const Legends = () => {
                       </a>
 
                       <a
-                        className="flex flex-col py-2 items-center no-underline md:w-1/3"
+                        className="flex flex-col py-2 items-center no-underline md:w-1/3 pointer-events-none cursor-default"
                         href="#"
                       >
                         <div className="flex relative">
@@ -125,7 +126,7 @@ const Legends = () => {
                             className="block rounded-full border-2 border-baseColor w-14 h-14"
                             src={legend.abilities[1].icon_url}
                           />
-                          <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
+                          <div className="absolute  bg-baseColor rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
                             {legend.abilities[1].cooldown === null
                               ? 0
                               : legend.abilities[1].cooldown}
@@ -141,7 +142,7 @@ const Legends = () => {
                       </a>
 
                       <a
-                        className="flex flex-col py-2 items-center no-underline md:w-1/3"
+                        className="flex flex-col py-2 items-center no-underline md:w-1/3 pointer-events-none cursor-default"
                         href="#"
                       >
                         <div className="flex relative">
@@ -150,7 +151,7 @@ const Legends = () => {
                             className="block rounded-full border-2 border-accentColor w-14 h-14"
                             src={legend.abilities[2].icon_url}
                           />
-                          <div className="absolute  bg-blue-900 rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
+                          <div className="absolute  bg-baseColor rounded-full p-0.5 bottom-0 left-14 text-white text-xs">
                             {legend.abilities[2].cooldown === null
                               ? 0
                               : legend.abilities[2].cooldown}

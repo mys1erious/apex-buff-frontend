@@ -1,10 +1,39 @@
 // import React from "react";
 import logo from "../../assets/logo_apexbuff.svg";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+// import { createGlobalState } from "react-hooks-global-state";
 import { Transition } from "@headlessui/react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const ref = useRef(null);
+  // let finalInput = "";
+
+  // const [userInput, setUserInput] = useState("");
+  // const { setUsername, useUsername } = createGlobalState({
+  //   username: "k1llovat",
+  // });
+
+  // console.log(setUsername);
+
+  // useEffect(() => {
+  //   const inputSearch = document.getElementById("usernameSearch");
+  //   const handleClick = (event) => {
+  //     finalInput = inputSearch.value;
+  //     console.log(finalInput);
+  //   };
+
+  //   const element = ref.current;
+
+  //   element.addEventListener("click", handleClick);
+
+  //   return () => {
+  //     element.removeEventListener("click", handleClick);
+  //   };
+  // }, []);
+  // console.log(userInput);
+
   return (
     <div className="sticky top-0 z-50">
       <nav className="bg-gray-800">
@@ -37,7 +66,14 @@ const Nav = () => {
                     Weapons
                   </a>
 
-                  <div className="flex justify-center items-center space-x-2">
+                  <a
+                    href="#stats"
+                    className="text-gray-300 hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Stats
+                  </a>
+
+                  {/* <div className="flex justify-center items-center space-x-2">
                     <input
                       type="search"
                       id="usernameSearch"
@@ -45,6 +81,7 @@ const Nav = () => {
                       placeholder="Your nickname..."
                       aria-label="Search"
                       aria-describedby="button-addon3"
+                      // onChange={(e) => setUserInput(e.target.value)}
                     />
                     <button
                       className="inline-block px-6 py-1 border-2  border-baseColor text-white font-medium tracking-wide text-xs leading-tight uppercase rounded hover:bg-white hover:text-mainColor  focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
@@ -53,7 +90,7 @@ const Nav = () => {
                     >
                       Search
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -137,7 +174,14 @@ const Nav = () => {
                   Weapons
                 </a>
 
-                <div className="flex flex-col justify-center items-start ml-3 space-y-2">
+                <a
+                  href="#stats"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Stats
+                </a>
+
+                {/* <div className="flex flex-col justify-center items-start ml-3 space-y-2">
                   <input
                     type="search"
                     id="usernameSearch"
@@ -153,7 +197,7 @@ const Nav = () => {
                   >
                     Search
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
